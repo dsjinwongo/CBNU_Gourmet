@@ -1,27 +1,26 @@
 package com.mytest.test.domain;
 
-import java.util.Date;
-
 public class BoardVO {
-	int num;
 	String name;
-	Date regdate;
-	public int getNum() {
-		return num;
-	}
-	public void setNum(int num) {
-		this.num = num;
-	}
+	String rate;
+	String review;
+	
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Date getRegdate() {
-		return regdate;
+	public String getRate() {
+		return rate;
 	}
-	public void setRegdate(Date regdate) {
-		this.regdate = regdate;
+	public void setRate(String rate) {
+		this.rate = rate;
+	}
+	public String getReview() {
+		return review;
+	}
+	public void setReview(String review) {
+		this.review = review;
 	}
 }

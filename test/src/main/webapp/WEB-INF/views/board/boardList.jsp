@@ -34,9 +34,9 @@
 		</tr>
 		<c:forEach items="${viewAll }" var="list">
 			<tr>
-				<td>${list.num }</td>
 				<td>${list.name }</td>
-				<td><fmt:formatDate value="${list.regdate }" pattern="yyyy.MM.dd"/> </td>
+				<td>${list.rate }</td>
+				<td>${list.review }</td>
 			</tr>
 		</c:forEach>
 	</table>

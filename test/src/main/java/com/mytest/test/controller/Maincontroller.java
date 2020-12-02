@@ -8,16 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 import com.mytest.test.service.BoardService;
-/*
-@Controller
-@RequestMapping("/")
-public class Maincontroller{
-	@RequestMapping("")
-	public String main() {
-		return "home";
-	}
-}
-*/
 
 @Controller
 @RequestMapping("")

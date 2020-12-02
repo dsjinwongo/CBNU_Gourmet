@@ -72,12 +72,18 @@ public class seleniumtest{
         	String name = names.getText();
         	String rate = ratings.getText();
         	String review = reviews.getText();
+        	
+        	String rate_intStr = rate.replaceAll("[^0-9.]", "");
+        	String review_intStr = review.replaceAll("[^0-9]", "");
+        	
+        	float rate_int = Float.parseFloat(rate_intStr);
+        	int review_int = Integer.parseInt(review_intStr);
 	        
         	System.out.println(name);
-        	System.out.println(rate);
-        	System.out.println(review);
+        	System.out.println(rate_int);
+        	System.out.println(review_int);
         	
-	        insert.main(name, rate, review);
+	        insert.main(name, rate_int, review_int);
 	        
         }
         driver.close();

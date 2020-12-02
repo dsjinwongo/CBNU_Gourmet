@@ -14,8 +14,16 @@
 
 <body>
 	<div class="title">
-		<h2>요기요 정보</h2>
+		<h1>한식 정보</h1>
 	</div>
+	<nav class="header">
+        <ul>
+        	<li><a href="/test/main/">메인</a></li>
+            <li><a href="/test/korea/" id="blue">한식</a></li>
+            <li><a href="/test/america/">양식</a></li>
+            <li><a href="/test/china/">중식</a></li>
+        </ul>
+    </nav>
 	<div class="banner">
 		<table class="table">
 			<thead class="thead-dark">
@@ -41,6 +49,5 @@
     <p>개발진: 이진원, 이성규, 김규빈, 장세나</p>
     <p>소속: 충북대학교</p>
     <p>충청북도 청주시 서원구 충대로 1</p>
-    <p>Update: 11am, 6pm</p>
 </footer>
 </html>

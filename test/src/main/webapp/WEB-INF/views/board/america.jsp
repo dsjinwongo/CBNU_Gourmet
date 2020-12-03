@@ -34,7 +34,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${viewAll }" var="list">
+				<c:forEach items="${viewAmerica }" var="list">
 					<tr>
 						<td>${list.name }</td>
 						<td>${list.rate }</td>

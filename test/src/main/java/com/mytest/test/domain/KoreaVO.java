@@ -1,6 +1,6 @@
 package com.mytest.test.domain;
 
-public class BoardVO {
+public class KoreaVO {
 	String name;
 	float rate;
 	int review;
@@ -22,5 +22,5 @@ public class BoardVO {
 	}
 	public void setReview(int review) {
 		this.review = review;
-	}	
+	}
 }

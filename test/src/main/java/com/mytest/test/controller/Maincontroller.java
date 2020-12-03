@@ -23,19 +23,19 @@ public class Maincontroller {
 
 	@RequestMapping("korea")
 	public String korea(Model model) {
-	  model.addAttribute("viewAll", boardService.viewAll());
+	  model.addAttribute("viewKorea", boardService.viewKorea());
 	  return "board/korea";
 	}
 	
 	@RequestMapping("america")
 	public String america(Model model) {
-		model.addAttribute("viewAll", boardService.viewAll());
+		model.addAttribute("viewAmerica", boardService.viewAmerica());
 		return "board/america";
 	}
 	
 	@RequestMapping("china")
 	public String china(Model model) {
-		model.addAttribute("viewAll", boardService.viewAll());
+		model.addAttribute("viewChina", boardService.viewChina());
 		return "board/china";
 	}
 }

@@ -2,7 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 <mapper namespace="com.mytest.test.mapper.BoardMapper">
 	<select id="viewAll" resultType="com.mytest.test.domain.BoardVO">
-	  SELECT * FROM board
+	  SELECT * FROM BOARD
 	</select>
-
+	<select id="viewKorea" resultType="com.mytest.test.domain.KoreaVO">
+	  SELECT * FROM KOREA
+	</select>
+	<select id="viewAmerica" resultType="com.mytest.test.domain.AmericaVO">
+	  SELECT * FROM AMERICA
+	</select>
+	<select id="viewChina" resultType="com.mytest.test.domain.ChinaVO">
+	  SELECT * FROM CHINA
+	</select>
 </mapper>

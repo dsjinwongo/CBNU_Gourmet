@@ -14,17 +14,29 @@ import com.mytest.test.service.BoardService;
 public class Maincontroller {
 	@Autowired
 	private BoardService boardService;
-
-	@RequestMapping("test")
-	public String test(Model model) {
+	
+	@RequestMapping("main")
+	public String main(Model model) {
 	  model.addAttribute("viewAll", boardService.viewAll());
-	  return "board/test";
+	  return "board/main";
+	}
+
+	@RequestMapping("korea")
+	public String korea(Model model) {
+	  model.addAttribute("viewKorea", boardService.viewKorea());
+	  return "board/korea";
 	}
 	
-	@RequestMapping("board")
-	public String board(Model model) {
-		model.addAttribute("viewAll", boardService.viewAll());
-		return "board/boardList";
+	@RequestMapping("america")
+	public String america(Model model) {
+		model.addAttribute("viewAmerica", boardService.viewAmerica());
+		return "board/america";
+	}
+	
+	@RequestMapping("china")
+	public String china(Model model) {
+		model.addAttribute("viewChina", boardService.viewChina());
+		return "board/china";
 	}
 }
 

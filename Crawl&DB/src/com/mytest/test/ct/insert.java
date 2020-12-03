@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class insert {
-	public static void main(String name, String rate, String review) {
+	public static void main(String name, float rate, int review) {
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver"); 
@@ -26,8 +26,8 @@ public class insert {
 				
 				stmt = conn.prepareStatement(sql); 
 				stmt.setString(1, name);
-				stmt.setString(2, rate);
-				stmt.setString(3, review);
+				stmt.setFloat(2, rate);
+				stmt.setInt(3, review);
 				
 				stmt.executeUpdate();
 				

@@ -4,9 +4,8 @@ import java.util.Date;
 
 public class BoardVO {
 	int seq, cnt;
-	String title, writer, content;
+	String title, writer, review;
 	Date regdate;
-	
 	public int getSeq() {
 		return seq;
 	}
@@ -31,11 +30,11 @@ public class BoardVO {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
-	public String getContent() {
-		return content;
+	public String getReview() {
+		return review;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setReview(String review) {
+		this.review = review;
 	}
 	public Date getRegdate() {
 		return regdate;

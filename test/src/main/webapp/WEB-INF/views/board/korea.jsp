@@ -18,10 +18,10 @@
 	</div>
 	<nav class="header">
         <ul>
-        	<li><a href="/test/main/">메인</a></li>
-            <li><a href="/test/korea/" id="blue">한식</a></li>
-            <li><a href="/test/america/">양식</a></li>
-            <li><a href="/test/china/">중식</a></li>
+	        <li><a href="/korea/" id="blue">한식</a></li>
+	        <li><a href="/america/">양식</a></li>
+	        <li><a href="/china/" id="blue">중식</a></li>
+	        <li><a href="/board/">게시판</a></li>
         </ul>
     </nav>
 	<div class="banner">

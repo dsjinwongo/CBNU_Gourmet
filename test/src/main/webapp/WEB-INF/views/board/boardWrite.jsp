@@ -31,7 +31,7 @@ $(document).ready(function() {
 function goWrite(frm) {
 	var title = frm.title.value;
 	var writer = frm.writer.value;
-	var content = frm.content.value;
+	var review = frm.review.value;
 	
 	if (title.trim() == ''){
 		alert("제목을 입력해주세요");
@@ -41,7 +41,7 @@ function goWrite(frm) {
 		alert("작성자를 입력해주세요");
 		return false;
 	}
-	if (content.trim() == ''){
+	if (review.trim() == ''){
 		alert("내용을 입력해주세요");
 		return false;
 	}
@@ -58,7 +58,7 @@ function goWrite(frm) {
 		<input type="text" name="writer" style="width: 20%;" placeholder="작성자"/><br>
 		<input type="text" name="title" style="width: 40%;" placeholder="제목"/>
 		<br><br> 
-		<textarea id="summernote" name="content"></textarea>
+		<textarea id="summernote" name="review"></textarea>
 		<input id="subBtn" type="button" value="글 작성" style="float: right;" onclick="goWrite(this.form)"/>
 	</form>
 </div>

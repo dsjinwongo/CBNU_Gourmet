@@ -14,11 +14,11 @@
 	  SELECT * FROM CHINA
 	</select>  
 	<select id="viewDetail" resultType="com.mytest.test.domain.BoardVO" parameterType="int">
-	  SELECT * FROM BOARD WHERE SEQ = #{SEQ}
+	  SELECT * FROM BOARD WHERE SEQ = #{seq}
 	</select>
 	<!-- 조회수 +1 -->
 	<update id="plusCnt" parameterType="int">
-	  UPDATE BOARD SET CNT = CNT + 1 WHERE SEQ = #{SEQ}
+	  UPDATE BOARD SET CNT = CNT + 1 WHERE SEQ = #{seq}
 	</update>
 	
 	<insert id="insertBoard" parameterType="com.mytest.test.domain.BoardVO">
@@ -26,7 +26,7 @@
 	<selectKey keyProperty="seq" order="BEFORE" resultType="int">
 		SELECT BOARD_SEQ.NEXTVAL FROM DUAL
 	</selectKey>
-	INSERT INTO BOARD (SEQ, writer, title, content)
-				VALUES (#{SEQ}, #{writer}, #{title}, #{content})
+	INSERT INTO BOARD (SEQ, WRITER, TITLE, REVIEW)
+	VALUES (#{seq}, #{writer}, #{title}, #{review})
 </insert>
 </mapper>

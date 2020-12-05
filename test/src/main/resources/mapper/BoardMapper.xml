@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 <mapper namespace="com.mytest.test.mapper.BoardMapper">
 	<select id="viewAll" resultType="com.mytest.test.domain.BoardVO">
-	  SELECT * FROM BOARD
+	  SELECT * FROM board ORDER BY SEQ DESC
 	</select>
 	<select id="viewKorea" resultType="com.mytest.test.domain.KoreaVO">
 	  SELECT * FROM KOREA
@@ -12,5 +12,21 @@
 	</select>
 	<select id="viewChina" resultType="com.mytest.test.domain.ChinaVO">
 	  SELECT * FROM CHINA
+	</select>  
+	<select id="viewDetail" resultType="com.mytest.test.domain.BoardVO" parameterType="int">
+	  SELECT * FROM BOARD WHERE SEQ = #{SEQ}
 	</select>
+	<!-- 조회수 +1 -->
+	<update id="plusCnt" parameterType="int">
+	  UPDATE BOARD SET CNT = CNT + 1 WHERE SEQ = #{SEQ}
+	</update>
+	
+	<insert id="insertBoard" parameterType="com.mytest.test.domain.BoardVO">
+
+	<selectKey keyProperty="seq" order="BEFORE" resultType="int">
+		SELECT BOARD_SEQ.NEXTVAL FROM DUAL
+	</selectKey>
+	INSERT INTO BOARD (SEQ, writer, title, content)
+				VALUES (#{SEQ}, #{writer}, #{title}, #{content})
+</insert>
 </mapper>

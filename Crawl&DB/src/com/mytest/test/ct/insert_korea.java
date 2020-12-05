@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class insert {
+public class insert_korea {
 	public static void main(String name, float rate, int review) {
 		
 		try {
@@ -22,7 +22,7 @@ public class insert {
 						);
 				
 				PreparedStatement stmt = null;
-				String sql ="insert into BOARD values(?, ?, ?)";
+				String sql ="insert into KOREA values(?, ?, ?)";
 				
 				stmt = conn.prepareStatement(sql); 
 				stmt.setString(1, name);

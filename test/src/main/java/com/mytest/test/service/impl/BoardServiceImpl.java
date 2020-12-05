@@ -38,4 +38,19 @@ public class BoardServiceImpl implements BoardService {
 	public List<ChinaVO> viewChina() {
 		return mapper.viewChina();
 	}
+	
+	@Override
+	public BoardVO viewDetail(int seq) {
+	  return mapper.viewDetail(seq);
+	}
+	
+	@Override
+	public boolean plusCnt(int seq) {
+	  return mapper.plusCnt(seq);
+	}
+	
+	@Override
+	public int insertBoard(BoardVO vo) {
+		return mapper.insertBoard(vo);
+	}
 }

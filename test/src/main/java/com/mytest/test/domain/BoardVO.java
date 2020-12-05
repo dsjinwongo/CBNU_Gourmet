@@ -1,26 +1,46 @@
 package com.mytest.test.domain;
 
+import java.util.Date;
+
 public class BoardVO {
-	String name;
-	float rate;
-	int review;
+	int seq, cnt;
+	String title, writer, content;
+	Date regdate;
 	
-	public String getName() {
-		return name;
+	public int getSeq() {
+		return seq;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setSeq(int seq) {
+		this.seq = seq;
 	}
-	public float getRate() {
-		return rate;
+	public int getCnt() {
+		return cnt;
 	}
-	public void setRate(float rate) {
-		this.rate = rate;
+	public void setCnt(int cnt) {
+		this.cnt = cnt;
 	}
-	public int getReview() {
-		return review;
+	public String getTitle() {
+		return title;
 	}
-	public void setReview(int review) {
-		this.review = review;
-	}	
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getWriter() {
+		return writer;
+	}
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public Date getRegdate() {
+		return regdate;
+	}
+	public void setRegdate(Date regdate) {
+		this.regdate = regdate;
+	}
 }

@@ -1,6 +1,6 @@
 package com.mytest.test.ct;
 
-import com.mytest.test.ct.insert;
+import com.mytest.test.ct.insert_china;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,8 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
-public class seleniumtest{
+public class crawl_china {
 	public static void main(String[] args) {
 		// 현재 package의 workspace 경로, Windows는 [ chromedriver.exe ]
         Path path = Paths.get(System.getProperty("user.dir"), "src/main/resources/chromedriver");  // 현재 package의
@@ -59,6 +58,19 @@ public class seleniumtest{
 
            }
         
+        WebElement menu=driver.findElementByXPath("//*[@id=\"category\"]/ul/li[7]");
+        menu.click();
+        
+        try {
+
+        	Thread.sleep(1000); //1초 대기
+
+           } catch (InterruptedException e) {
+
+        	e.printStackTrace();
+
+           }
+        
         for(int i=1; i<20; i++)
         {
         	String names_xpath = String.format("//*[@id=\"content\"]/div/div[4]/div/div[2]/div[%d]/div/table/tbody/tr/td[2]/div/div[1]",i);
@@ -83,9 +95,9 @@ public class seleniumtest{
         	System.out.println(rate_int);
         	System.out.println(review_int);
         	
-	        insert.main(name, rate_int, review_int);
-	        
+	        insert_china.main(name, rate_int, review_int);
         }
+        
         driver.close();
         
         try {
@@ -96,6 +108,7 @@ public class seleniumtest{
             // WebDriver 종료
             driver.quit();
         }
+        
 	}
-	
+
 }

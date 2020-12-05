@@ -12,4 +12,7 @@ public interface BoardMapper {
 	public List<KoreaVO> viewKorea();
 	public List<AmericaVO> viewAmerica();
 	public List<ChinaVO> viewChina();
+	public BoardVO viewDetail(int seq);
+	public boolean plusCnt(int seq);
+	public int insertBoard(BoardVO vo);
 }

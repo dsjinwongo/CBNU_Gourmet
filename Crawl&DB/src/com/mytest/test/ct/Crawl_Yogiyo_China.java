@@ -1,6 +1,6 @@
 package com.mytest.test.ct;
 
-import com.mytest.test.ct.insert;
+import com.mytest.test.ct.Insert_China;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,29 +12,28 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
-public class seleniumtest{
+public class Crawl_Yogiyo_China {
 	public static void main(String[] args) {
-		// í˜„ìž¬ packageì˜ workspace ê²½ë¡œ, WindowsëŠ” [ chromedriver.exe ]
-        Path path = Paths.get(System.getProperty("user.dir"), "src/main/resources/chromedriver");  // í˜„ìž¬ packageì˜
+		// ÇöÀç packageÀÇ workspace °æ·Î, Windows´Â [ chromedriver.exe ]
+        Path path = Paths.get(System.getProperty("user.dir"), "src/main/resources/chromedriver");  // ÇöÀç packageÀÇ
         
-        // WebDriver ê²½ë¡œ ì„¤ì •
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\dsgo2\\Downloads/chromedriver.exe");
+        // WebDriver °æ·Î ¼³Á¤
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\kimgu\\desktop\\´ëÇÐ\\¿ÀÇÂ¼Ò½º °³¹ßÇÁ·ÎÁ§Æ®/chromedriver.exe");
         
-        // WebDriver ì˜µì…˜ ì„¤ì •
+        // WebDriver ¿É¼Ç ¼³Á¤
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");            // ì „ì²´í™”ë©´ìœ¼ë¡œ ì‹¤í–‰
-        options.addArguments("--disable-popup-blocking");    // íŒì—… ë¬´ì‹œ
-        options.addArguments("--disable-default-apps");     // ê¸°ë³¸ì•± ì‚¬ìš©ì•ˆí•¨
+        options.addArguments("--start-maximized");            // ÀüÃ¼È­¸éÀ¸·Î ½ÇÇà
+        options.addArguments("--disable-popup-blocking");    // ÆË¾÷ ¹«½Ã
+        options.addArguments("--disable-default-apps");     // ±âº»¾Û »ç¿ë¾ÈÇÔ
         
-        // WebDriver ê°ì²´ ìƒì„±
+        // WebDriver °´Ã¼ »ý¼º
         ChromeDriver driver = new ChromeDriver( options );
        
         driver.get("https://www.yogiyo.co.kr/mobile/#/");
         
         try {
 
-        	Thread.sleep(1000); //1ì´ˆ ëŒ€ê¸°
+        	Thread.sleep(1000); //1ÃÊ ´ë±â
 
            } catch (InterruptedException e) {
 
@@ -44,14 +43,27 @@ public class seleniumtest{
         
         WebElement element=driver.findElementByName("address_input");
         element.clear();
-        element.sendKeys("ì¶©ì²­ë¶ë„ ì²­ì£¼ì‹œ ì„œì›êµ¬ ê°œì‹ ë™ 12 ì¶©ë¶ëŒ€í•™êµ");
+        element.sendKeys("ÃæÃ»ºÏµµ Ã»ÁÖ½Ã ¼­¿ø±¸ °³½Åµ¿ 12 ÃæºÏ´ëÇÐ±³");
         
         WebElement button=driver.findElementByCssSelector("button.btn.btn-default.ico-pick");
         button.click();
         
         try {
 
-        	Thread.sleep(1000); //1ì´ˆ ëŒ€ê¸°
+        	Thread.sleep(1000); //1ÃÊ ´ë±â
+
+           } catch (InterruptedException e) {
+
+        	e.printStackTrace();
+
+           }
+        
+        WebElement menu=driver.findElementByXPath("//*[@id=\"category\"]/ul/li[7]");
+        menu.click();
+        
+        try {
+
+        	Thread.sleep(1000); //1ÃÊ ´ë±â
 
            } catch (InterruptedException e) {
 
@@ -72,14 +84,21 @@ public class seleniumtest{
         	String name = names.getText();
         	String rate = ratings.getText();
         	String review = reviews.getText();
+        	
+        	String rate_numStr = rate.replaceAll("[^0-9.]", "");
+        	String review_numStr = review.replaceAll("[^0-9]", "");
+        	
+        	float rate_num = Float.parseFloat(rate_numStr);
+        	int review_num = Integer.parseInt(review_numStr);
 	        
         	System.out.println(name);
-        	System.out.println(rate);
-        	System.out.println(review);
+        	System.out.println(rate_num);
+        	System.out.println(review_num);
         	
-	        insert.main(name, rate, review);
-	        
+        	if (rate_num>=4.5&&review_num>100)
+        		Insert_Korea.main(name, rate_num, review_num);
         }
+        
         driver.close();
         
         try {
@@ -87,9 +106,10 @@ public class seleniumtest{
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            // WebDriver ì¢…ë£Œ
+            // WebDriver Á¾·á
             driver.quit();
         }
+        
 	}
-	
+
 }

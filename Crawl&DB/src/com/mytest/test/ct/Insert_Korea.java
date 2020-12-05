@@ -6,8 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class insert {
-	public static void main(String name, String rate, String review) {
+public class Insert_Korea {
+	public static void main(String name, float rate, int review) {
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver"); 
@@ -18,16 +18,19 @@ public class insert {
 		try {
 				Connection conn = DriverManager.getConnection(
 						"jdbc:oracle:thin:@localhost:1521:XE",
-						"SYSTEM", "1234"
+						"C##abc", "1234"
 						);
 				
+				conn.setAutoCommit(false);				//À§Ä¡ º¯°æ
 				PreparedStatement stmt = null;
-				String sql ="insert into BOARD values(?, ?, ?)";
 				
+				String sql ="insert into KOREA values(?, ?, ?)";
+				
+				//conn.setAutoCommit(false);
 				stmt = conn.prepareStatement(sql); 
 				stmt.setString(1, name);
-				stmt.setString(2, rate);
-				stmt.setString(3, review);
+				stmt.setFloat(2, rate);
+				stmt.setInt(3, review);
 				
 				stmt.executeUpdate();
 				
@@ -35,8 +38,7 @@ public class insert {
 				conn.close();
 				
 		} catch (Exception e) {
-			System.err.println("ì˜¤ë¥˜ë°œìƒ : " + e);
+			System.err.println("¿À·ù¹ß»ı : " + e);
 		}	
 	}
 }
-

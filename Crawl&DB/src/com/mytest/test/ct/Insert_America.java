@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class insert {
+public class Insert_America {
 	public static void main(String name, float rate, int review) {
 		
 		try {
@@ -18,11 +18,12 @@ public class insert {
 		try {
 				Connection conn = DriverManager.getConnection(
 						"jdbc:oracle:thin:@localhost:1521:XE",
-						"SYSTEM", "1234"
+						"C##abc", "1234"
 						);
 				
+				conn.setAutoCommit(false);
 				PreparedStatement stmt = null;
-				String sql ="insert into BOARD values(?, ?, ?)";
+				String sql ="insert into AMERICA values(?, ?, ?)";
 				
 				stmt = conn.prepareStatement(sql); 
 				stmt.setString(1, name);
@@ -35,8 +36,7 @@ public class insert {
 				conn.close();
 				
 		} catch (Exception e) {
-			System.err.println("ì˜¤ë¥˜ë°œìƒ : " + e);
+			System.err.println("¿À·ù¹ß»ı : " + e);
 		}	
 	}
 }
-

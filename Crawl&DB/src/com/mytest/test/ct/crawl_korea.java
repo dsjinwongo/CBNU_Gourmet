@@ -12,7 +12,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
 public class crawl_korea{
 	public static void main(String[] args) {
 		// 현재 package의 workspace 경로, Windows는 [ chromedriver.exe ]
@@ -96,7 +95,7 @@ public class crawl_korea{
         	System.out.println(rate_int);
         	System.out.println(review_int);
         	
-	        insert_main.main(name, rate_int, review_int);
+	        insert_korea.main(name, rate_int, review_int);
         }
         driver.close();
         
@@ -109,5 +108,4 @@ public class crawl_korea{
             driver.quit();
         }
 	}
-	
 }

@@ -96,7 +96,7 @@ public class crawl_america{
         	System.out.println(rate_int);
         	System.out.println(review_int);
         	
-	        insert_main.main(name, rate_int, review_int);
+	        insert_america.main(name, rate_int, review_int);
         }
         driver.close();
         

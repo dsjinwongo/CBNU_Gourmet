@@ -22,11 +22,10 @@
 	</update>
 	
 	<insert id="insertBoard" parameterType="com.mytest.test.domain.BoardVO">
-
-	<selectKey keyProperty="seq" order="BEFORE" resultType="int">
-		SELECT BOARD_SEQ.NEXTVAL FROM DUAL
-	</selectKey>
-	INSERT INTO BOARD (SEQ, WRITER, TITLE, REVIEW)
-	VALUES (#{seq}, #{writer}, #{title}, #{review})
-</insert>
+		<selectKey keyProperty="seq" order="BEFORE" resultType="int">
+			SELECT BOARD_SEQ.NEXTVAL FROM DUAL
+		</selectKey>
+		INSERT INTO BOARD (SEQ, WRITER, TITLE, REVIEW)
+		VALUES (#{seq}, #{writer}, #{title}, #{review})
+	</insert>
 </mapper>

@@ -92,12 +92,15 @@ public class Crawl_Daum {
 		        	System.out.println(review);
 		        	System.out.println(location);
 		        	
-		        	if (kind=="중화요리"||kind=="중식") 
+		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Insert_China.main(name, rate_num, review_num);
-		        	else if (kind=="분식"||kind=="한정식"||kind=="육류,고기"||kind=="삼겹살")
+		        	}
+		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Insert_Korea.main(name, rate_num, review_num);
-		        	else if (kind=="양식"||kind=="햄버거"||kind=="치킨")
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
 		        		Insert_America.main(name, rate_num, review_num);
+		        	}
 		        }
 		        
 		        for(int i=5; i<16; i++) {
@@ -132,12 +135,15 @@ public class Crawl_Daum {
 		        	System.out.println(review);
 		        	System.out.println(location);
 		        	
-		        	if (kind=="중화요리"||kind=="중식") 
+		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Insert_China.main(name, rate_num, review_num);
-		        	else if (kind=="분식"||kind=="한정식"||kind=="육류,고기"||kind=="삼겹살")
+		        	}
+		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Insert_Korea.main(name, rate_num, review_num);
-		        	else if (kind=="양식"||kind=="햄버거"||kind=="치킨")
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
 		        		Insert_America.main(name, rate_num, review_num);
+		        	}
 		        }
 		        try {
 
@@ -195,12 +201,15 @@ public class Crawl_Daum {
 		        	System.out.println(review);
 		        	System.out.println(location);
 		        	
-		        	if (kind=="중화요리"||kind=="중식") 
+		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Insert_China.main(name, rate_num, review_num);
-		        	else if (kind=="분식"||kind=="한정식"||kind=="육류,고기"||kind=="삼겹살")
+		        	}
+		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Insert_Korea.main(name, rate_num, review_num);
-		        	else if (kind=="양식"||kind=="햄버거"||kind=="치킨")
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
 		        		Insert_America.main(name, rate_num, review_num);
+		        	}
 		        }
 		        
 		        for(int i=5; i<17; i++) {
@@ -235,12 +244,15 @@ public class Crawl_Daum {
 		        	System.out.println(review);
 		        	System.out.println(location);
 		        	
-		        	if (kind=="중화요리"||kind=="중식") 
+		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Insert_China.main(name, rate_num, review_num);
-		        	else if (kind=="분식"||kind=="한정식"||kind=="육류,고기"||kind=="삼겹살")
+		        	}
+		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Insert_Korea.main(name, rate_num, review_num);
-		        	else if (kind=="양식"||kind=="햄버거"||kind=="치킨")
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
 		        		Insert_America.main(name, rate_num, review_num);
+		        	}
 		        	
 		        }
 		        
@@ -290,12 +302,15 @@ public class Crawl_Daum {
 		        	System.out.println(review);
 		        	System.out.println(location);
 		        	
-		        	if (kind=="중화요리"||kind=="중식") 
+		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Insert_China.main(name, rate_num, review_num);
-		        	else if (kind=="분식"||kind=="한정식"||kind=="육류,고기"||kind=="삼겹살")
+		        	}
+		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Insert_Korea.main(name, rate_num, review_num);
-		        	else if (kind=="양식"||kind=="햄버거"||kind=="치킨")
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
 		        		Insert_America.main(name, rate_num, review_num);
+		        	}
 		        }
 		        
 		        for(int i=5; i<16; i++) {
@@ -330,12 +345,15 @@ public class Crawl_Daum {
 		        	System.out.println(review);
 		        	System.out.println(location);
 		        	
-		        	if (kind=="중화요리"||kind=="중식") 
+		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Insert_China.main(name, rate_num, review_num);
-		        	else if (kind=="분식"||kind=="한정식"||kind=="육류,고기"||kind=="삼겹살")
+		        	}
+		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Insert_Korea.main(name, rate_num, review_num);
-		        	else if (kind=="양식"||kind=="햄버거"||kind=="치킨")
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
 		        		Insert_America.main(name, rate_num, review_num);
+		        	}
 		        	
 		        }
 		        
@@ -385,12 +403,15 @@ public class Crawl_Daum {
 		        	System.out.println(review);
 		        	System.out.println(location);
 		        	
-		        	if (kind=="중화요리"||kind=="중식") 
+		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Insert_China.main(name, rate_num, review_num);
-		        	else if (kind=="분식"||kind=="한정식"||kind=="육류,고기"||kind=="삼겹살")
+		        	}
+		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Insert_Korea.main(name, rate_num, review_num);
-		        	else if (kind=="양식"||kind=="햄버거"||kind=="치킨")
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
 		        		Insert_America.main(name, rate_num, review_num);
+		        	}
 		        }
 		        
 		        for(int i=5; i<16; i++) {
@@ -480,12 +501,15 @@ public class Crawl_Daum {
 		        	System.out.println(review);
 		        	System.out.println(location);
 		        	
-		        	if (kind=="중화요리"||kind=="중식") 
+		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Insert_China.main(name, rate_num, review_num);
-		        	else if (kind=="분식"||kind=="한정식"||kind=="육류,고기"||kind=="삼겹살")
+		        	}
+		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Insert_Korea.main(name, rate_num, review_num);
-		        	else if (kind=="양식"||kind=="햄버거"||kind=="치킨")
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
 		        		Insert_America.main(name, rate_num, review_num);
+		        	}
 		        }
 		        
 		        for(int i=5; i<16; i++) {
@@ -520,12 +544,15 @@ public class Crawl_Daum {
 		        	System.out.println(review);
 		        	System.out.println(location);
 		        	
-		        	if (kind=="중화요리"||kind=="중식") 
+		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Insert_China.main(name, rate_num, review_num);
-		        	else if (kind=="분식"||kind=="한정식"||kind=="육류,고기"||kind=="삼겹살")
+		        	}
+		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Insert_Korea.main(name, rate_num, review_num);
-		        	else if (kind=="양식"||kind=="햄버거"||kind=="치킨")
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
 		        		Insert_America.main(name, rate_num, review_num);
+		        	}
 		        	
 		        }
 		      

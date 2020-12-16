@@ -1,14 +1,14 @@
 .title {
-    background-color: black;
+    background-color: Darkslategray;
     text-align: center;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 1px;
     font-weight: bold;
     width: 100%;
 }
 
 .title h1 {
-    color:white;
+    color: black;
     font-size: 100px;
     display: inline-block;
 }
@@ -17,10 +17,11 @@
     color:white;
     font-size: 20px;
     display: inline-block;
+    font-family: 'Jua', sans-serif;
 }
 
 .header {
-    font-family: "Arial", sans-serif;
+    font-family: 'Jua', sans-serif;
     font-size: 20px;
     font-weight: 900;
     line-height: 1.25;
@@ -39,12 +40,14 @@
 }
 
 .banner {
-    background-color: lavender;
+    background-color: Azure;
     padding: 100px 0;
     text-align: center;
     display: inline-block;
     width: 100%;
 }
+
+
 
 .departure {
     text-align: left;
@@ -55,7 +58,7 @@
 .banner h3 {
   font-size: 30px;
   font-weight: bold;
-  color: black;
+  color: Azure;
   padding: 20px 20px;
 }
 

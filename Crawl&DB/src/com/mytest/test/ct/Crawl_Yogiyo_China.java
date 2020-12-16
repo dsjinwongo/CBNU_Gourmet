@@ -92,12 +92,44 @@ public class Crawl_Yogiyo_China {
         	float rate_num = Float.parseFloat(rate_numStr);
         	int review_num = Integer.parseInt(review_numStr);
 	        
+        	String more_info_xpath = String.format("//*[@id=\"content\"]/div/div[4]/div/div[2]/div[%d]/div", i);
+        	WebElement more_info = driver.findElementByXPath(more_info_xpath);
+        	more_info.click();
+        	
+        	try {
+            	Thread.sleep(1000); //1ÃÊ ´ë±â
+               } catch (InterruptedException e) {
+            	e.printStackTrace();
+               }
+        	
+        	more_info=driver.findElementByXPath("//*[@id=\"content\"]/div[2]/div[1]/ul/li[3]/a");
+        	more_info.click();
+        	
+        	WebElement open_times = driver.findElementByXPath("//*[@id=\"info\"]/div[2]/p[1]/span");
+        	WebElement phone_nums = driver.findElementByXPath("//*[@id=\"info\"]/div[2]/p[2]/span");
+        	WebElement addresses = driver.findElementByXPath("//*[@id=\"info\"]/div[2]/p[3]/span");
+        	
+        	String open_time = open_times.getText();
+        	String phone_num = phone_nums.getText();
+        	String address = addresses.getText();
+        	
         	System.out.println(name);
         	System.out.println(rate_num);
         	System.out.println(review_num);
+        	System.out.println(open_time);
+        	System.out.println(phone_num);
+        	System.out.println(address);
         	
         	if (rate_num>=4.5&&review_num>100)
         		Check_China_Store.main(name, rate_num, review_num);
+        	
+        	driver.navigate().back();
+        	
+        	try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         
         driver.close();

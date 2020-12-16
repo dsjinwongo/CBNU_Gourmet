@@ -1,6 +1,6 @@
 package com.mytest.test.ct;
 
-import com.mytest.test.ct.Insert_Korea;
+import com.mytest.test.ct.Check_Korea_Store;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -97,7 +97,7 @@ public class Crawl_Yogiyo_Korea{
         	System.out.println(review_num);
         	
         	if (rate_num>=4.5&&review_num>100)
-        		Insert_Korea.main(name, rate_num, review_num);
+        		Check_Korea_Store.main(name, rate_num, review_num);
         }
         driver.close();
         

@@ -9,7 +9,7 @@ import java.sql.Statement;
 import com.mytest.test.ct.Insert_Korea;
 
 public class Check_Korea_Store {
-	public static void main(String store_name, float rate, int review) {
+	public static void main(String store_name, float rate, int review, String address) {
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver"); 
@@ -46,7 +46,7 @@ public class Check_Korea_Store {
 					}while(rs.next());
 				}
 				
-				Insert_Korea.main(store_name, rate, review);
+				Insert_Korea.main(store_name, rate, review, address);
 				
 				conn.commit();
 				conn.close();

@@ -9,7 +9,7 @@ import java.sql.Statement;
 import com.mytest.test.ct.Insert_China;
 
 public class Add_China {
-	public static void main(String store_name, float rate, int review) {
+	public static void main(String store_name, float rate, int review, String address) {
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver"); 
@@ -27,7 +27,7 @@ public class Add_China {
 				PreparedStatement stmt = null;
 				ResultSet rs = null;
 				
-				String sql ="SELECT name, rate, review from CHINA where name = ?";
+				String sql ="SELECT name, rate, review, address from CHINA where name = ?";
 				
 				stmt = conn.prepareStatement(sql);
 				stmt.setString(1, store_name);
@@ -42,20 +42,21 @@ public class Add_China {
 						int new_review = yogiyo_review+review;
 						float new_rate = ((yogiyo_rate*yogiyo_review)+(rate*review))/new_review;
 						
-						String sql2 = "UPDATE CHINA SET NAME = ?, RATE = ?, REVIEW = ? WHERE NAME = ?";
+						String sql2 = "UPDATE CHINA SET NAME = ?, RATE = ?, REVIEW = ?, ADDRESS = ? WHERE NAME = ?";
 						
 						stmt = conn.prepareStatement(sql2);
 						stmt.setString(1, store_name);
 						stmt.setFloat(2, new_rate);
 						stmt.setInt(3, new_review);
-						stmt.setString(4, store_name);
+						stmt.setString(4, address);
+						stmt.setString(5, store_name);
 						
 						int num = stmt.executeUpdate();
 						System.out.println(num);
 					}while(rs.next());
 				}
 				else {
-					Insert_China.main(store_name, rate, review);
+					Insert_China.main(store_name, rate, review, address);
 				}
 				
 				conn.commit();

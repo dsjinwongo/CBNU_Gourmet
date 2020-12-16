@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Insert_China {
-	public static void main(String name, float rate, int review) {
+	public static void main(String name, float rate, int review, String address) {
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver"); 
@@ -24,12 +24,13 @@ public class Insert_China {
 				conn.setAutoCommit(false);
 				
 				PreparedStatement stmt = null;
-				String sql ="insert into CHINA values(?, ?, ?)";
+				String sql ="insert into CHINA values(?, ?, ?, ?)";
 				
 				stmt = conn.prepareStatement(sql); 
 				stmt.setString(1, name);
 				stmt.setFloat(2, rate);
 				stmt.setInt(3, review);
+				stmt.setString(4, address);
 				
 				stmt.executeUpdate();
 				

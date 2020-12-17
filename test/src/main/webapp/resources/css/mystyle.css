@@ -1,5 +1,5 @@
 .title {
-    background-color: black;
+    background-color: darkslategray;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -9,14 +9,16 @@
 
 .title h1 {
     color:white;
-    font-size: 40px;
+    font-size: 40px;   
     display: inline-block;
+    font-family: 'Jua', sans-serif;
 }
 
 .title h2 {
     color:white;
     font-size: 20px;
     display: inline-block;
+    font-family: 'Jua', sans-serif;
 }
 
 .header {
@@ -24,7 +26,7 @@
     font-size: 20px;
     font-weight: 900;
     line-height: 1.25;
-    background-color:gold;
+    background-color:white;
     width: 100%;
 }
   
@@ -39,7 +41,7 @@
 }
 
 .banner {
-    background-color: lavender;
+    background-color: gainsboro;
     padding: 100px 0;
     text-align: center;
     display: inline-block;

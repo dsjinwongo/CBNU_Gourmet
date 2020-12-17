@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="member">
+	<select id="loginCheck" resultType="String">
+        SELECT USERNAME AS userName FROM member
+        WHERE USERID = #{userId} AND USERPW = #{userPw}
+    </select>
+	<select id="viewMember" resultType="com.mytest.test.domain.MemberVO">
+	    SELECT 
+          USERID AS userId, 
+          USERNAME AS userName,
+          USEREMAIL AS userEmail,
+          REGDATE AS userRegdate
+        FROM member
+        WHERE USERID = #{userId} AND USERPW = #{userPw}
+    </select>
+    <select id="memberList" resultType="com.mytest.test.domain.MemberVO">
+        SELECT 
+          USERID AS userId, 
+          USERNAME AS userName,
+          USEREMAIL AS userEmail,
+          REGDATE AS userRegdate
+        FROM member
+        ORDER BY userName
+    </select>
+    <insert id="insertMember">
+        INSERT INTO member
+            (USERID, USERPW, USERNAME, USEREMAIL)
+        VALUES 
+            (#{userId}, #{userPw}, #{userName}, #{userEmail})    
+    </insert>
+</mapper>

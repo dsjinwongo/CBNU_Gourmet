@@ -6,15 +6,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.mytest.test.domain.BoardVO;
 import com.mytest.test.service.BoardService;
 
 @Controller
 @RequestMapping("")
-public class Maincontroller {
+public class Boardcontroller {
 	@Autowired
 	private BoardService boardService;
 	
@@ -28,6 +26,12 @@ public class Maincontroller {
 	public String korea(Model model) {
 	  model.addAttribute("viewKorea", boardService.viewKorea());
 	  return "board/korea";
+	}
+	
+	@RequestMapping("dessert")
+	public String dessert(Model model) {
+	  model.addAttribute("viewDessert", boardService.viewDessert());
+	  return "board/dessert";
 	}
 	
 	@RequestMapping("america")

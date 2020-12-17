@@ -8,6 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <link href="<c:url value="/resources/css/mystyle.css" />" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 <script src="/resources/js/table_sort.js"></script>
 <script type="text/javascript">
 
@@ -39,7 +40,7 @@
 		    <option value="1">별점순</option>
 		    <option value="2">리뷰순</option>
 		</select>
-		<table class="table">
+		<table id="myTable" class="table table-bordered">
 			<thead class="thead-dark">
 				<tr>
 					<th scope="col">가게명</th>

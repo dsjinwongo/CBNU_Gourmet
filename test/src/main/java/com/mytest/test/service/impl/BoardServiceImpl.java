@@ -11,6 +11,7 @@ import com.mytest.test.service.BoardService;
 import com.mytest.test.domain.AmericaVO;
 import com.mytest.test.domain.BoardVO;
 import com.mytest.test.domain.ChinaVO;
+import com.mytest.test.domain.DessertVO;
 import com.mytest.test.domain.KoreaVO;
 
 @Service
@@ -22,6 +23,11 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public List<BoardVO> viewAll() {
 		return mapper.viewAll();
+	}
+	
+	@Override
+	public List<DessertVO> viewDessert() {
+		return mapper.viewDessert();
 	}
 	
 	@Override

@@ -42,6 +42,7 @@ public class Add_China {
 						int new_review = yogiyo_review+review;
 						float new_rate = ((yogiyo_rate*yogiyo_review)+(rate*review))/new_review;
 						
+						if (new_rate>=4.0&&new_review>50) {
 						String sql2 = "UPDATE CHINA SET NAME = ?, RATE = ?, REVIEW = ?, ADDRESS = ? WHERE NAME = ?";
 						
 						stmt = conn.prepareStatement(sql2);
@@ -51,12 +52,14 @@ public class Add_China {
 						stmt.setString(4, address);
 						stmt.setString(5, store_name);
 						
-						int num = stmt.executeUpdate();
-						System.out.println(num);
+						stmt.executeUpdate();
+						}
 					}while(rs.next());
 				}
 				else {
+					if (rate>=4.0&&review>50) {
 					Insert_China.main(store_name, rate, review, address);
+					}
 				}
 				
 				conn.commit();

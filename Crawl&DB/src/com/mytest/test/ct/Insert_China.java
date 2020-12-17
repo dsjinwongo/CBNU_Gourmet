@@ -22,7 +22,6 @@ public class Insert_China {
 						);
 				
 				conn.setAutoCommit(false);
-				
 				PreparedStatement stmt = null;
 				String sql ="insert into CHINA values(?, ?, ?, ?)";
 				
@@ -38,7 +37,8 @@ public class Insert_China {
 				conn.close();
 				
 		} catch (Exception e) {
-			System.err.println("오류발생 : " + e);
+			System.err.println("error : " + e);
 		}	
 	}
 }
+

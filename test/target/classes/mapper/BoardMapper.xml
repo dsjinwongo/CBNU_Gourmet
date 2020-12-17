@@ -1,16 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 <mapper namespace="com.mytest.test.mapper.BoardMapper">
-	<select id="viewAll" resultType="com.mytest.test.domain.BoardVO">
-	  SELECT * FROM BOARD
-	</select>
+	<select id="viewAll" resultType="com.mytest.test.domain.BoardVO">SELECT * FROM BOARD ORDER BY SEQ DESC </select>
 	<select id="viewKorea" resultType="com.mytest.test.domain.KoreaVO">
 	  SELECT * FROM KOREA
 	</select>
+	<!--<select id="viewKoreaDetail" resultType="com.mytest.test.domain.KoreaVO">
+	  SELECT * FROM KOREA WHERE NAME = #{name}
+	</select>-->
 	<select id="viewAmerica" resultType="com.mytest.test.domain.AmericaVO">
 	  SELECT * FROM AMERICA
 	</select>
+	<!--<select id="viewAmericaDetail" resultType="com.mytest.test.domain.AmericaVO">
+	  SELECT * FROM AMERICA WHERE NAME = #{name}
+	</select>-->
 	<select id="viewChina" resultType="com.mytest.test.domain.ChinaVO">
 	  SELECT * FROM CHINA
+	</select>  
+	<!-- <select id="viewChinaDetail" resultType="com.mytest.test.domain.ChinaVO">
+	  SELECT * FROM CHINA WHERE NAME = #{name}
+	</select>-->
+	<select id="viewSnack" resultType="com.mytest.test.domain.SnackVO">
+	  SELECT * FROM SNACK
+	</select> 
+	<select id="viewJapan" resultType="com.mytest.test.domain.JapanVO">
+	  SELECT * FROM JAPAN
+	</select> 
+	<select id="viewChicken" resultType="com.mytest.test.domain.ChickenVO">
+	  SELECT * FROM CHICKEN
+	</select> 
+	<select id="viewDessert" resultType="com.mytest.test.domain.DessertVO">
+	  SELECT * FROM DESSERT
+	</select> 
+	<select id="viewDetail" resultType="com.mytest.test.domain.BoardVO">
+	  SELECT * FROM BOARD WHERE SEQ = #{seq}
 	</select>
+	<!-- 조회수 +1 -->
+	<update id="plusCnt" parameterType="int">
+	  UPDATE BOARD SET CNT = CNT + 1 WHERE SEQ = #{seq}
+	</update>
+	
+	<insert id="insertBoard" parameterType="com.mytest.test.domain.BoardVO">
+
+	<selectKey keyProperty="seq" order="BEFORE" resultType="int">
+		SELECT SEQ.NEXTVAL FROM DUAL
+	</selectKey>
+	INSERT INTO BOARD (SEQ, WRITER, TITLE, REVIEW) VALUES (#{seq}, #{writer}, #{title}, #{review})
+</insert>
 </mapper>

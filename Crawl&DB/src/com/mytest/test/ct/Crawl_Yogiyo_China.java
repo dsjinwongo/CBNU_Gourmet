@@ -72,7 +72,7 @@ public class Crawl_Yogiyo_China {
 
            }
         
-        for(int i=1; i<20; i++)
+        for(int i=1; i<50; i++)
         {
         	String names_xpath = String.format("//*[@id=\"content\"]/div/div[4]/div/div[2]/div[%d]/div/table/tbody/tr/td[2]/div/div[1]",i);
         	String ratings_xpath = String.format("//*[@id=\"content\"]/div/div[4]/div/div[2]/div[%d]/div/table/tbody/tr/td[2]/div/div[2]/span[1]/span",i);
@@ -120,8 +120,9 @@ public class Crawl_Yogiyo_China {
         	System.out.println(phone_num);
         	System.out.println(address);
         	
-        	if (rate_num>=4.5&&review_num>100)
+        	if (rate_num>=4.5&&review_num>100) {
         		Check_China_Store.main(name, rate_num, review_num, address);
+        	}
         	
         	driver.navigate().back();
         	

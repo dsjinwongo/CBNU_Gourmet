@@ -21,12 +21,10 @@ public class Insert_Korea {
 						"C##abc", "1234"
 						);
 				
-				conn.setAutoCommit(false);				//위치 변경
+				conn.setAutoCommit(false);
 				PreparedStatement stmt = null;
-				
 				String sql ="insert into KOREA values(?, ?, ?, ?)";
 				
-				//conn.setAutoCommit(false);
 				stmt = conn.prepareStatement(sql); 
 				stmt.setString(1, name);
 				stmt.setFloat(2, rate);
@@ -39,7 +37,8 @@ public class Insert_Korea {
 				conn.close();
 				
 		} catch (Exception e) {
-			System.err.println("오류발생 : " + e);
+			System.err.println("error : " + e);
 		}	
 	}
 }
+

@@ -3,6 +3,10 @@ package com.mytest.test.ct;
 import com.mytest.test.ct.Add_America;
 import com.mytest.test.ct.Add_Korea;
 import com.mytest.test.ct.Add_China;
+import com.mytest.test.ct.Add_Snack;
+import com.mytest.test.ct.Add_Japan;
+import com.mytest.test.ct.Add_Chicken;
+import com.mytest.test.ct.Add_Dessert;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.*;
@@ -95,11 +99,23 @@ public class Crawl_Daum {
 		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Add_China.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
+		        	else if (kind.equals("닭요리")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Add_Korea.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
+		        	else if (kind.equals("분식")||kind.equals("떡볶이")) {
+		        		Add_Snack.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("패스트푸드")) {
 		        		Add_America.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("카페")||kind.equals("테마카페")||kind.equals("제과,베이커리")||kind.equals("커피전문점")) {
+		        		Add_Dessert.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("치킨")) {
+		        		Add_Chicken.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("일식집")||kind.equals("회")||kind.equals("초밥,롤")||kind.equals("일본식라멘")) {
+		        		Add_Japan.main(name, rate_num, review_num, location);
 		        	}
 		        }
 		        
@@ -138,11 +154,23 @@ public class Crawl_Daum {
 		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Add_China.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
+		        	else if (kind.equals("닭요리")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Add_Korea.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
+		        	else if (kind.equals("분식")||kind.equals("떡볶이")) {
+		        		Add_Snack.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("패스트푸드")) {
 		        		Add_America.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("카페")||kind.equals("테마카페")||kind.equals("제과,베이커리")||kind.equals("커피전문점")) {
+		        		Add_Dessert.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("치킨")) {
+		        		Add_Chicken.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("일식집")||kind.equals("회")||kind.equals("초밥,롤")||kind.equals("일본식라멘")) {
+		        		Add_Japan.main(name, rate_num, review_num, location);
 		        	}
 		        }
 		        try {
@@ -204,11 +232,23 @@ public class Crawl_Daum {
 		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Add_China.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
+		        	else if (kind.equals("닭요리")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Add_Korea.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
+		        	else if (kind.equals("분식")||kind.equals("떡볶이")) {
+		        		Add_Snack.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("패스트푸드")) {
 		        		Add_America.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("카페")||kind.equals("테마카페")||kind.equals("제과,베이커리")||kind.equals("커피전문점")) {
+		        		Add_Dessert.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("치킨")) {
+		        		Add_Chicken.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("일식집")||kind.equals("회")||kind.equals("초밥,롤")||kind.equals("일본식라멘")) {
+		        		Add_Japan.main(name, rate_num, review_num, location);
 		        	}
 		        }
 		        
@@ -247,11 +287,23 @@ public class Crawl_Daum {
 		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Add_China.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
+		        	else if (kind.equals("닭요리")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Add_Korea.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
+		        	else if (kind.equals("분식")||kind.equals("떡볶이")) {
+		        		Add_Snack.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("패스트푸드")) {
 		        		Add_America.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("카페")||kind.equals("테마카페")||kind.equals("제과,베이커리")||kind.equals("커피전문점")) {
+		        		Add_Dessert.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("치킨")) {
+		        		Add_Chicken.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("일식집")||kind.equals("회")||kind.equals("초밥,롤")||kind.equals("일본식라멘")) {
+		        		Add_Japan.main(name, rate_num, review_num, location);
 		        	}
 		        	
 		        }
@@ -305,11 +357,23 @@ public class Crawl_Daum {
 		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Add_China.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
+		        	else if (kind.equals("닭요리")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Add_Korea.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
+		        	else if (kind.equals("분식")||kind.equals("떡볶이")) {
+		        		Add_Snack.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("패스트푸드")) {
 		        		Add_America.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("카페")||kind.equals("테마카페")||kind.equals("제과,베이커리")||kind.equals("커피전문점")) {
+		        		Add_Dessert.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("치킨")) {
+		        		Add_Chicken.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("일식집")||kind.equals("회")||kind.equals("초밥,롤")||kind.equals("일본식라멘")) {
+		        		Add_Japan.main(name, rate_num, review_num, location);
 		        	}
 		        }
 		        
@@ -348,11 +412,23 @@ public class Crawl_Daum {
 		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Add_China.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
+		        	else if (kind.equals("닭요리")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Add_Korea.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
+		        	else if (kind.equals("분식")||kind.equals("떡볶이")) {
+		        		Add_Snack.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("패스트푸드")) {
 		        		Add_America.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("카페")||kind.equals("테마카페")||kind.equals("제과,베이커리")||kind.equals("커피전문점")) {
+		        		Add_Dessert.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("치킨")) {
+		        		Add_Chicken.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("일식집")||kind.equals("회")||kind.equals("초밥,롤")||kind.equals("일본식라멘")) {
+		        		Add_Japan.main(name, rate_num, review_num, location);
 		        	}
 		        	
 		        }
@@ -406,11 +482,23 @@ public class Crawl_Daum {
 		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Add_China.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
+		        	else if (kind.equals("닭요리")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Add_Korea.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
+		        	else if (kind.equals("분식")||kind.equals("떡볶이")) {
+		        		Add_Snack.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("패스트푸드")) {
 		        		Add_America.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("카페")||kind.equals("테마카페")||kind.equals("제과,베이커리")||kind.equals("커피전문점")) {
+		        		Add_Dessert.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("치킨")) {
+		        		Add_Chicken.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("일식집")||kind.equals("회")||kind.equals("초밥,롤")||kind.equals("일본식라멘")) {
+		        		Add_Japan.main(name, rate_num, review_num, location);
 		        	}
 		        }
 		        
@@ -446,14 +534,26 @@ public class Crawl_Daum {
 		        	System.out.println(review);
 		        	System.out.println(location);
 		        	
-		        	if (kind=="중화요리"||kind=="중식") {
+		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Add_China.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind=="분식"||kind=="한정식"||kind=="육류,고기"||kind=="삼겹살") {
+		        	else if (kind.equals("닭요리")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Add_Korea.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind=="양식"||kind=="햄버거"||kind=="치킨") {
+		        	else if (kind.equals("분식")||kind.equals("떡볶이")) {
+		        		Add_Snack.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("패스트푸드")) {
 		        		Add_America.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("카페")||kind.equals("테마카페")||kind.equals("제과,베이커리")||kind.equals("커피전문점")) {
+		        		Add_Dessert.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("치킨")) {
+		        		Add_Chicken.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("일식집")||kind.equals("회")||kind.equals("초밥,롤")||kind.equals("일본식라멘")) {
+		        		Add_Japan.main(name, rate_num, review_num, location);
 		        	}
 		        	
 		        }
@@ -507,11 +607,23 @@ public class Crawl_Daum {
 		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Add_China.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
+		        	else if (kind.equals("닭요리")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Add_Korea.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
+		        	else if (kind.equals("분식")||kind.equals("떡볶이")) {
+		        		Add_Snack.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("패스트푸드")) {
 		        		Add_America.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("카페")||kind.equals("테마카페")||kind.equals("제과,베이커리")||kind.equals("커피전문점")) {
+		        		Add_Dessert.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("치킨")) {
+		        		Add_Chicken.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("일식집")||kind.equals("회")||kind.equals("초밥,롤")||kind.equals("일본식라멘")) {
+		        		Add_Japan.main(name, rate_num, review_num, location);
 		        	}
 		        }
 		        
@@ -550,11 +662,23 @@ public class Crawl_Daum {
 		        	if (kind.equals("중화요리")||kind.equals("중식")) { 
 		        		Add_China.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("분식")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
+		        	else if (kind.equals("닭요리")||kind.equals("한정식")||kind.equals("육류,고기")||kind.equals("삼겹살")) {
 		        		Add_Korea.main(name, rate_num, review_num, location);
 		        	}
-		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("치킨")) {
+		        	else if (kind.equals("분식")||kind.equals("떡볶이")) {
+		        		Add_Snack.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("양식")||kind.equals("햄버거")||kind.equals("패스트푸드")) {
 		        		Add_America.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("카페")||kind.equals("테마카페")||kind.equals("제과,베이커리")||kind.equals("커피전문점")) {
+		        		Add_Dessert.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("치킨")) {
+		        		Add_Chicken.main(name, rate_num, review_num, location);
+		        	}
+		        	else if (kind.equals("일식집")||kind.equals("회")||kind.equals("초밥,롤")||kind.equals("일본식라멘")) {
+		        		Add_Japan.main(name, rate_num, review_num, location);
 		        	}
 		        	
 		        }

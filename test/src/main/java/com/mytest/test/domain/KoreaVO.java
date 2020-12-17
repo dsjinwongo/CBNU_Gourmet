@@ -4,6 +4,7 @@ public class KoreaVO {
 	String name;
 	float rate;
 	int review;
+	String address;
 	
 	public String getName() {
 		return name;
@@ -23,4 +24,10 @@ public class KoreaVO {
 	public void setReview(int review) {
 		this.review = review;
 	}
+	/*public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}*/
 }

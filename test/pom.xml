@@ -11,7 +11,7 @@
 	  <java-version>1.8</java-version>
 	  <org.springframework-version>5.0.7.RELEASE</org.springframework-version>
 	  <org.aspectj-version>1.6.10</org.aspectj-version>
-	  <org.slf4j-version>1.6.6</org.slf4j-version>
+	  <org.slf4j-version>1.7.21</org.slf4j-version>
 	</properties>
 	<repositories>
 		<repository>
@@ -164,6 +164,18 @@
 		  <groupId>org.jsoup</groupId>
 		  <artifactId>jsoup</artifactId>
 		  <version>1.11.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>ch.qos.logback</groupId>
+		    <artifactId>logback-classic</artifactId>
+		    <version>1.1.7</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>jcl-over-slf4j</artifactId>
+		    <version>${org.slf4j-version}</version>
+		    <scope>runtime</scope>
 		</dependency>
 	</dependencies>
     <build>

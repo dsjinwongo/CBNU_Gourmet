@@ -1,7 +1,7 @@
 package com.mytest.test.domain;
 
 public class AmericaVO {
-	String name;
+	String name, address;
 	float rate;
 	int review;
 	
@@ -10,6 +10,12 @@ public class AmericaVO {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public float getRate() {
 		return rate;

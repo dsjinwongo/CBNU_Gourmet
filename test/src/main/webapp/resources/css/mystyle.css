@@ -7,6 +7,10 @@
     width: 100%;
 }
 
+.mybody {
+	padding-top:8%;
+}
+
 .title h1 {
     color:white;
     font-size: 40px;   

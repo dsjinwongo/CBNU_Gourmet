@@ -1,13 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
@@ -17,38 +14,35 @@
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+    <style type="text/css">
+	 a:link { color: red; text-decoration: none;}
+	 a:visited { color: black; text-decoration: none;}
+	 a:hover { color: blue; text-decoration: underline;}
+	</style>
+
     <title>CBNU GOURMET</title>
-    <style>
-        a {
-            color: black;
-        }
-        a:hover {
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
 <nav class="navbar fixed-top">
-    <span class="user-position"><a href="${path}/immain">충청북도 청주시 서원구 충대로1</a></span>
+    <h2><a color="black" href="${path}/main">CBNU GOURMET</a></h2>
     <div class="btn-group">
-      <c:choose>
-	  	<c:when test="${sessionScope.userId != null}">
-	  		<h4>${sessionScope.userName}(${sessionScope.userId})님 환영합니다.</h4>
-	  	</c:when>
-	  </c:choose>
-    
+    	<c:choose>
+			<c:when test="${sessionScope.userId != null}">
+   			<h3>${sessionScope.userName}(${sessionScope.userId})님 환영합니다.</h3>
+   			</c:when>
+   		</c:choose>
       <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="ex3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="material-icons icon-set1">account_circle</i>
       </button>
-
       <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="ex3">
         <ul>
-	        <c:choose>
+           <c:choose>
 			    <c:when test="${sessionScope.userId == null}">
 			        <li><a href="${path}/login.do">로그인</a></li>
-			        <li><a href="${path}/write.do">회원가입</a></li> 
+			        <li><a href="${path}/write.do">회원가입</a></li>
 			    </c:when>
 			    <c:otherwise>
+			        ${sessionScope.userName}님이 로그인중입니다.
 			        <li><a href="${path}/logout.do">로그아웃</a></li>
 			    </c:otherwise>
 			</c:choose>
@@ -62,7 +56,7 @@
     <div class="image-slide">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div id="fisrtim" class="carousel-item active">
               <img class="d-block w-100" src="https://github.com/senajang/naverplacecrawler/blob/master/KakaoTalk_20201217_033909696.jpg?raw=true" alt="First slide">
             </div>
           </div>
@@ -78,68 +72,63 @@
         </div>
     </div>
     <div class="item-list item-list01 row">
-    	<c:choose>
-			<c:when test="${sessionScope.userId == null}">
-				<div class="item item01" onclick="location.href='${path}/login.do';" style="cursor:pointer;">
-			</c:when>
-			<c:otherwise>
-				<div class="item item01" onclick="location.href='${path}/board';" style="cursor:pointer;">
-			</c:otherwise>
-		</c:choose>
+    <c:choose>
+    <c:when test="${sessionScope.userId == null}">
+    	<div class="item item01" onclick="location.href='${path}/login.do';" style="cursor:pointer;">
+    </c:when>
+    <c:otherwise>
+        <div class="item item01" onclick="location.href='${path}/board';" style="cursor:pointer;">
+    </c:otherwise>
+	</c:choose>
             <p class="item-maintext">CBNU 미식가 게시판</p>
             <p class="item-subtext">CBNU  gourmet  board</p>
             <div class="item-image item-image-set1">
-	            
                 <img src="https://github.com/dsjinwongo/Java_Project/blob/seongkyu/chef.jpg?raw=true" width="150">
             </div>
         </div>
-        <div class="item item-set item02">
+        <div class="item item-set item02"onclick="location.href='${path}/korea';" style="cursor:pointer;">
             <p class="item-maintext">한식</p>
             <p class="item-subtext">Korean Food</p>
             <div class="item-image">
                 <img src="https://github.com/dsjinwongo/Java_Project/blob/seongkyu/rice.jpg?raw=true" width="150">
             </div>
         </div>
-        <div class="item item-set item03">
+        <div class="item item-set item03"onclick="location.href='${path}/snack';" style="cursor:pointer;">
             <p class="item-maintext">분식</p>
             <p class="item-subtext">Snack Menu</p>
             <div class="item-image">
                 <img src="https://github.com/dsjinwongo/Java_Project/blob/seongkyu/dduk.jpg?raw=true" width="150">
             </div>
         </div>
-        <div class="item item-set item04">
+        <div class="item item-set item04"onclick="location.href='${path}/japan';" style="cursor:pointer;">
             <p class="item-maintext">일식</p>
             <p class="item-subtext">Japanese Food</p>
             <div class="item-image">
                 <img src="https://github.com/dsjinwongo/Java_Project/blob/seongkyu/sushi.jpg?raw=true" width="150">
             </div>
         </div>
-    </div>
-    <div class="item-list item-list02 row">
-        <div class="item item-set item05">
-            <a href="item-list.html">
-                <p class="item-maintext">치킨</p>
-            <p class="item-subtext">Chciken</p>
+    	<div class="item-list item-list05 row" onclick="location.href='${path}/chicken';" style="cursor:pointer;">
+            <p class="item-maintext">치킨</p>
+            <p class="item-subtext">Chicken</p>
             <div class="item-image">
                 <img src="https://github.com/dsjinwongo/Java_Project/blob/seongkyu/chicken.jpg?raw=true" width="150">
             </div>
-            </a>
         </div>
-        <div class="item item-set item06">
-            <p class="item-maintext">피자</p>
-            <p class="item-subtext">Pizza</p>
+        <div class="item item-set item06" onclick="location.href='${path}/america';" style="cursor:pointer;">
+            <p class="item-maintext">피자/양식</p>
+            <p class="item-subtext">Pizza/Western Food</p>
             <div class="item-image">
                 <img src="https://github.com/dsjinwongo/Java_Project/blob/seongkyu/pizza.jpg?raw=true" width="150">
             </div>
         </div>
-        <div class="item item-set item07">
+        <div class="item item-set item07" onclick="location.href='${path}/china';" style="cursor:pointer;">
             <p class="item-maintext">중국집</p>
-            <p class="item-subtext">Chinesse Food</p>
+            <p class="item-subtext">Chinese Food</p>
             <div class="item-image">
                 <img src="https://github.com/dsjinwongo/Java_Project/blob/seongkyu/zzazang.jpg?raw=true" width="150">
             </div>
         </div>
-        <div class="item item-set item08">
+        <div class="item item-set item08" onclick="location.href='${path}/dessert';" style="cursor:pointer;">
             <p class="item-maintext">디저트</p>
             <p class="item-subtext">Dessert</p>
             <div class="item-image">
@@ -153,8 +142,6 @@
 	    <p><strong>개발진</strong> 김규빈, 이성규, 이진원, 장세나</p>
 	    <p><strong>소속</strong> 충북대학교 소프트웨어학과</p>
 	    <p><strong>주소</strong> 충청북도 청주시 서원구 충대로1</p>
-	  <p><strong>UPDATE</strong> 11a.m, 6p.m
-	    <a href="http://store.baemin.com/shop/main/index.php">
 	</div>
 </footer>
 </html>

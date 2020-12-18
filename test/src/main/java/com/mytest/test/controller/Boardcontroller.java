@@ -28,10 +28,28 @@ public class Boardcontroller {
 	  return "board/korea";
 	}
 	
+	@RequestMapping("snack")
+	public String snack(Model model) {
+	  model.addAttribute("viewSnack", boardService.viewSnack());
+	  return "board/snack";
+	}
+	
 	@RequestMapping("dessert")
 	public String dessert(Model model) {
 	  model.addAttribute("viewDessert", boardService.viewDessert());
 	  return "board/dessert";
+	}
+	
+	@RequestMapping("japan")
+	public String japan(Model model) {
+	  model.addAttribute("viewJapan", boardService.viewJapan());
+	  return "board/japan";
+	}
+	
+	@RequestMapping("chicken")
+	public String chicken(Model model) {
+	  model.addAttribute("viewChicken", boardService.viewChicken());
+	  return "board/chicken";
 	}
 	
 	@RequestMapping("america")

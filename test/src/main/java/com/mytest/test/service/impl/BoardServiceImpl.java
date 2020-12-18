@@ -10,9 +10,12 @@ import com.mytest.test.service.BoardService;
 
 import com.mytest.test.domain.AmericaVO;
 import com.mytest.test.domain.BoardVO;
+import com.mytest.test.domain.ChickenVO;
 import com.mytest.test.domain.ChinaVO;
 import com.mytest.test.domain.DessertVO;
+import com.mytest.test.domain.JapanVO;
 import com.mytest.test.domain.KoreaVO;
+import com.mytest.test.domain.SnackVO;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -28,6 +31,19 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public List<DessertVO> viewDessert() {
 		return mapper.viewDessert();
+	}
+	
+	@Override
+	public List<ChickenVO> viewChicken() {
+		return mapper.viewChicken();
+	}
+	@Override
+	public List<SnackVO> viewSnack() {
+		return mapper.viewSnack();
+	}
+	@Override
+	public List<JapanVO> viewJapan() {
+		return mapper.viewJapan();
 	}
 	
 	@Override

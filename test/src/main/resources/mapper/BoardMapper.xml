@@ -15,6 +15,15 @@
 	</select>
 	<select id="viewChina" resultType="com.mytest.test.domain.ChinaVO">
 	  SELECT * FROM CHINA
+	</select>
+	<select id="viewChicken" resultType="com.mytest.test.domain.ChickenVO">
+	  SELECT * FROM CHICKEN
+	</select>
+	<select id="viewSnack" resultType="com.mytest.test.domain.SnackVO">
+	  SELECT * FROM SNACK
+	</select>
+	<select id="viewJapan" resultType="com.mytest.test.domain.JapanVO">
+	  SELECT * FROM JAPAN
 	</select>  
 	<select id="viewDetail" resultType="com.mytest.test.domain.BoardVO" parameterType="int">
 	  SELECT * FROM BOARD WHERE SEQ = #{seq}

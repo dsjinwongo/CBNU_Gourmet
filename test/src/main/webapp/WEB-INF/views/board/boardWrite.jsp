@@ -51,14 +51,14 @@ function goWrite(frm) {
 </head>	
 
 <body>
-<h2 style="text-align: center;">글 작성</h2><br><br><br>
+<h2 style="text-align: center;">글 작성</h2><br><br>
 
 <div style="width: 60%; margin: auto;">
 	<form method="post" action="/write">
-		<input type="text" name="writer" style="width: 20%;" placeholder="작성자"/><br>
+		<input type="text" name="writer" style="width: 20%;" placeholder="작성자"/><br><br>
 		<input type="text" name="title" style="width: 40%;" placeholder="제목"/>
 		<br><br> 
-		<textarea id="summernote" name="review"></textarea>
+		<textarea id="summernote" name="review"></textarea><br>
 		<input id="subBtn" type="button" value="글 작성" style="float: right;" onclick="goWrite(this.form)"/>
 	</form>
 </div>

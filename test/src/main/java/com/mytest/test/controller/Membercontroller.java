@@ -38,7 +38,7 @@ public class Membercontroller {
         ModelAndView mav = new ModelAndView();
         if (result == true) { // 로그인 성공
             // main.jsp로 이동
-            mav.setViewName("immain");
+            mav.setViewName("main");
             mav.addObject("msg", "success");
         } else {    // 로그인 실패
             // login.jsp로 이동
@@ -53,7 +53,7 @@ public class Membercontroller {
     public ModelAndView logout(HttpSession session){
         memberService.logout(session);
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("member/login");
+        mav.setViewName("main");
         mav.addObject("msg", "logout");
         return mav;
     }
@@ -88,6 +88,6 @@ public class Membercontroller {
         // /member/list.do : 루트 디렉토리를 기준
         // member/list.do : 현재 디렉토리를 기준
         // member_list.jsp로 리다이렉트
-        return "immain";
+        return "main";
     }
 }

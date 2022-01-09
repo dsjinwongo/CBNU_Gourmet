@@ -1,6 +1,9 @@
 # CBNU_Gourmet
 This is for java project at CBNU_OpenDevelop
 
+## Tech
+
+
 ## Role
 ✔ Technical Lead
  - Server 설계 및 관리 (Spring, Oracle Database, 

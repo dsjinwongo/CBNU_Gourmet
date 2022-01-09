@@ -1,4 +1,4 @@
-# Java_Project
+# CBNU_Gourmet
 This is for java project at CBNU_OpenDevelop
 
 ### CBNU Gourmet 개발

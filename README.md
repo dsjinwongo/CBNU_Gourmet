@@ -1,6 +1,7 @@
 # CBNU_Gourmet
 This is for java project at CBNU_OpenDevelop
 
+## Role
 ✔ Technical Lead
  - Server 설계 및 관리 (Spring, Oracle Database, 
  Apache Tomcat)
@@ -8,4 +9,4 @@ This is for java project at CBNU_OpenDevelop
  - 회원가입&로그인&게시판 구현
 ✔ Project Lead
  - 개발 프로세스: Github을 통해 형상관리
- - 회의: 매주 목요일 오후 6시 오프라인미
+ - 회의: 매주 목요일 오후 6시 오프라인미xld

@@ -1,7 +1,6 @@
 # CBNU_Gourmet
 This is for java project at CBNU_OpenDevelop
 
-### CBNU Gourmet 개발
 ✔ Technical Lead
  - Server 설계 및 관리 (Spring, Oracle Database, 
  Apache Tomcat)

@@ -16,4 +16,4 @@ This is project for CBNU_OpenDevelop
 
 ✔ Project Lead
  - 개발 프로세스: Github을 통해 형상관리
- - 회의: 매주 목요일 오후 6시 오프라인미xld
+ - 회의: 매주 목요일 오후 6시 오프라인 미팅

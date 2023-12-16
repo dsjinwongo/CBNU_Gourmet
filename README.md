@@ -11,7 +11,7 @@ This is project for CBNU_OpenDevelop
 ✔ Technical Lead
  - Server 설계 및 관리 (Spring, Oracle Database, 
  Apache Tomcat)
- - 요기요 사이트 매장 정보 크롤링(Selenium)
+ - 요기요 사이트 매장 정보 크롤링(Selenium, JSoup)
  - 회원가입&로그인&게시판 구현
 
 ✔ Project Lead
